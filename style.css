@@ -1,0 +1,203 @@
+/* Resetting */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Common Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  background-color: #e2e8f0;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Ehoundstooth%3C/title%3E%3Cg fill='%23f9fafb' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M0 18h6l6-6v6h6l-6 6H0M24 18v6h-6M24 0l-6 6h-6l6-6M12 0v6L0 18v-6l6-6H0V0'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1e293b;
+  color: #f9fafb;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.logo {
+  margin-left: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: #94a3b8;
+}
+
+/* main Section */
+.profile {
+    border-radius: 100%;
+    border: 4px solid rgb(163, 169, 197);
+    transition: transform 0.4s ease-in-out;
+}
+
+.profile:hover {
+    transform: scale(1.1);
+}
+
+.main-section {
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #1e293b;
+}
+
+.pdf-buttons {
+  margin: 30px;
+}
+
+.pdf-buttons a {
+  text-decoration: none;
+  background-color: #1e293b;
+  color: #f9fafb;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+  gap: 9px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.pdf-buttons a:hover {
+  background-color: #334155;
+}
+
+.download-icon {
+    width: 25px;
+    height: 25px;
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #1e293b;
+  color: #f9fafb;
+  font-size: 0.9rem;
+}
+
+/* Headings */
+.heading {
+  text-align: center;
+  margin-top: 20px;
+  color: #1e293b;
+}
+
+/* About & Project Section */
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 50px;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.info {
+  background-color: rgb(163, 169, 197);
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 900px;
+  color: #1e293b;
+}
+
+.skills {
+    list-style: none;
+}
+
+.project-info {
+    margin-left: 20px;
+}
+
+.github-link {
+    text-decoration: none;
+}
+
+.github-link:hover {
+    color: #1e293b;
+}
+
+/* Contact Section */
+.contact-section {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.form-container {
+  background-color: #0f172a;
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.contact-me {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+input,
+textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  resize: none;
+}
+
+button {
+  background-color: #1e293b;
+  color: #f9fafb;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #334155;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .nav-links {
+    margin: 10px;
+    gap: 50px;
+  }
+}
