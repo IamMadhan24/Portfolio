@@ -43,6 +43,7 @@ body {
   color: #94a3b8;
 }
 
+
 /* main Section */
 .profile {
     border-radius: 100%;
@@ -55,7 +56,7 @@ body {
 }
 
 .main-section {
-  height: 100vh;
+  /* height: 100vh; */
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -73,12 +74,13 @@ body {
   background-color: #1e293b;
   color: #f9fafb;
   padding: 10px 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   transition: background-color 0.3s ease;
   font-weight: 600;
   gap: 9px;
   display: inline-flex;
   align-items: center;
+  font-size: 0.8rem;
 }
 
 .pdf-buttons a:hover {
@@ -86,10 +88,9 @@ body {
 }
 
 .download-icon {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
 }
-
 
 /* Footer */
 footer {
@@ -102,9 +103,31 @@ footer {
 
 /* Headings */
 .heading {
-  text-align: center;
-  margin-top: 20px;
+  margin: 20px;
   color: #1e293b;
+  text-align: center;
+}
+
+.heading span {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.heading span::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 0;
+  background-color: #1e293b;
+  transition: width 0.3s ease;
+}
+
+.heading span:hover::after {
+  width: 100%;
 }
 
 /* About & Project Section */
@@ -113,9 +136,10 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   gap: 50px;
-  padding: 20px;
+  /* padding: 20px; */
+  margin: 20px 35px;
   margin-bottom: 50px;
 }
 
@@ -142,15 +166,15 @@ footer {
 
 .github-link:hover {
     color: #1e293b;
+    text-decoration: underline;
 }
 
 /* Contact Section */
 .contact-section {
-  height: 80vh;
   display: flex;
+  /* height: 80vh; */
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
 }
 
 .form-container {
@@ -167,13 +191,14 @@ footer {
   gap: 10px;
 }
 
-
 input,
-textarea {
+textarea, 
+button {
   padding: 10px;
   border-radius: 5px;
   border: none;
   resize: none;
+  font-family: inherit;
 }
 
 button {
@@ -189,6 +214,16 @@ button:hover {
   background-color: #334155;
 }
 
+/* Wrapper for All Pages */
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+/* Responsive for Small Screens */
 @media only screen and (max-width: 600px) {
   .navbar {
     flex-direction: column;
